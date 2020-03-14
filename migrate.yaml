@@ -1,0 +1,3 @@
+# database metadata
+engine: 'PostgreSQL'
+dbname: 'ClassicModel'
