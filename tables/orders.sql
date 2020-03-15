@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS orders 
+CREATE TABLE IF NOT EXISTS public.orders 
 (
     /*  column definitions */
     order_number        INTEGER         NOT NULL 
@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS orders
     ,customer_number    INTEGER         NOT NULL 
 
     /*  primary key definition */
-    ,PRIMARY KEY    order_number 
+    ,PRIMARY KEY    (order_number) 
 
     /*  foreign key definitions */
-    ,FOREIGN KEY    customer_number REFERENCES customers (customer_number)
+    ,FOREIGN KEY    (customer_number) REFERENCES customers (customer_number)
 );

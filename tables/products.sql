@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS products 
+CREATE TABLE IF NOT EXISTS public.products 
 (
     /*  column definitions */
     product_code            VARCHAR(15)     NOT NULL 
@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS products
     ,msrp                   NUMERIC(10, 2)  NOT NULL 
 
     /*  primary key definition */
-    ,PRIMARY KEY    product_code 
+    ,PRIMARY KEY    (product_code) 
 
     /*  foreign key definitions */
-    ,FOREIGN KEY    product_line REFERENCES product_lines (product_line)
+    ,FOREIGN KEY    (product_line) REFERENCES product_lines (product_line)
 );

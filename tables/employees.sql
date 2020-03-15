@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS employees 
+CREATE TABLE IF NOT EXISTS public.employees 
 (
     /*  column definitions */
     employee_number         INTEGER         NOT NULL 
@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS employees
     ,job_title              VARCHAR(50)     NOT NULL 
 
     /*  primary key definition */
-    ,PRIMARY KEY    employee_number 
+    ,PRIMARY KEY    (employee_number) 
 
     /*  foreign key definitions */
-    ,FOREIGN KEY    office_code REFERENCES offices (office_code)
-    ,FOREIGN KEY    reports_to REFERENCES employees (employee_number)
+    ,FOREIGN KEY    (office_code) REFERENCES offices (office_code)
+    ,FOREIGN KEY    (reports_to) REFERENCES employees (employee_number)
 );

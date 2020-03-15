@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS product_lines 
+CREATE TABLE IF NOT EXISTS public.product_lines 
 (
     /*  column defintions */
     product_line        VARCHAR(50)     NOT NULL 
@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS product_lines
     ,image              BYTEA           NULL 
 
     /*  primary key definition */
-    ,PRIMARY KEY    product_line 
+    ,PRIMARY KEY    (product_line) 
 );

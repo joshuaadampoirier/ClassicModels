@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS customers 
+CREATE TABLE IF NOT EXISTS public.customers 
 (
     /*  column definitions */
     customer_number             INTEGER         NOT NULL 
@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS customers
     ,credit_limit               NUMERIC(10, 2)  DEFAULT NULL 
 
     /*  primary key definition */
-    ,PRIMARY KEY    customer_number 
+    ,PRIMARY KEY    (customer_number) 
 
     /*  foreign key definitions */
-    ,FOREIGN KEY    sales_rep_employee_number REFERENCES 
+    ,FOREIGN KEY    (sales_rep_employee_number) REFERENCES 
                     employees (employee_number)
 );

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS payments 
+CREATE TABLE IF NOT EXISTS public.payments 
 (
     /*  column definitions */
     customer_number     INTEGER         NOT NULL 
@@ -10,5 +10,5 @@ CREATE TABLE IF NOT EXISTS payments
     ,PRIMARY KEY    (customer_number, check_number)
 
     /*  foreign key definitions */
-    ,FOREIGN KEY    customer_number REFERENCES customers (customer_number)
+    ,FOREIGN KEY    (customer_number) REFERENCES customers (customer_number)
 );

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS offices 
+CREATE TABLE IF NOT EXISTS public.offices 
 (
     /*  column definitions */
     office_code         VARCHAR(10)         NOT NULL 
@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS offices
     ,territory          VARCHAR(10)         NOT NULL 
 
     /*  primary key definition */
-    ,PRIMARY KEY    office_code 
+    ,PRIMARY KEY    (office_code) 
 );
