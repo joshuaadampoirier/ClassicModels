@@ -1,3 +1,16 @@
 # database metadata
 engine: 'PostgreSQL'
-dbname: 'ClassicModel'
+dbname: 'classicmodel'
+
+# migrations to be executed
+migrations:
+
+  # table definitions
+  tables:
+    always: False
+    recursive: False
+    order:
+      - 'offices.sql'
+      - 'employees.sql'
+      - 'customers.sql'
+      - 'orders.sql'
