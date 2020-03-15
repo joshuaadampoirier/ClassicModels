@@ -11,6 +11,20 @@ migrations:
     recursive: False
     order:
       - 'offices.sql'
+      - 'product_lines.sql'
       - 'employees.sql'
       - 'customers.sql'
       - 'orders.sql'
+      - 'products.sql'
+
+  # migration scripts
+  migrations:
+    always: False 
+    recursive: False 
+    order:
+      - '2019-03-15-003-init-pop-offices.sql'
+      - '2019-03-15-007-init-pop-product-lines.sql'
+      - '2019-03-15-002-init-pop-employees.sql'
+      - '2019-03-15-001-init-pop-customers.sql'
+      - '2019-03-15-005-init-pop-orders.sql'
+      - '2019-03-15-008-init-pop-products.sql'
